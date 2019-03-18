@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C40772CF-DE1C-41F6-9678-187CFFB80D2F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LightTrack</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.0.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\include;..\Thirdparty\eigen-3.3.4;..\Thirdparty\Pangolin\include;..\Thirdparty\Pangolin\build\src\include;..\Thirdparty\Pangolin\build\external\glew\include;..\Thirdparty\opencv-3.2.0\build;..\Thirdparty\opencv-3.2.0\include;..\Thirdparty\opencv-3.2.0\include\opencv;..\Thirdparty\opencv-3.2.0\modules\core\include;..\Thirdparty\opencv-3.2.0\modules\flann\include;..\Thirdparty\opencv-3.2.0\modules\imgproc\include;..\Thirdparty\opencv-3.2.0\modules\ml\include;..\Thirdparty\opencv-3.2.0\modules\photo\include;..\Thirdparty\opencv-3.2.0\modules\video\include;..\Thirdparty\opencv-3.2.0\modules\imgcodecs\include;..\Thirdparty\opencv-3.2.0\modules\shape\include;..\Thirdparty\opencv-3.2.0\modules\videoio\include;..\Thirdparty\opencv-3.2.0\modules\highgui\include;..\Thirdparty\opencv-3.2.0\modules\objdetect\include;..\Thirdparty\opencv-3.2.0\modules\superres\include;..\Thirdparty\opencv-3.2.0\modules\ts\include;..\Thirdparty\opencv-3.2.0\modules\features2d\include;..\Thirdparty\opencv-3.2.0\modules\calib3d\include;..\Thirdparty\opencv-3.2.0\modules\stitching\include;..\Thirdparty\opencv-3.2.0\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_shape320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_stitching320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_objdetect320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_superres320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_videostab320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_calib3d320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_features2d320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_flann320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_highgui320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_ml320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_photo320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_video320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_videoio320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_imgcodecs320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_imgproc320d.lib;..\Thirdparty\opencv-3.2.0\build\lib\Debug\opencv_core320d.lib;..\Thirdparty\Pangolin\build\src\Debug\pangolin.lib;opengl32.lib;glu32.lib;..\Thirdparty\Pangolin\build\external\glew\lib\glewd.lib;mf.lib;mfplat.lib;mfreadwrite.lib;mfuuid.lib;strmiids.lib;..\Thirdparty\Pangolin\build\external\libpng\lib\libpng16_staticd.lib;..\Thirdparty\Pangolin\build\external\zlib\lib\zlibstaticd.lib;..\Thirdparty\Pangolin\build\external\libjpeg\lib\jpeg.lib;..\Thirdparty\g2o\lib\Debug\g2o.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_WINDOWS;NOMINMAX;SLAM_IO_EXPORTS;SLAM_ELEM_EXPORTS;SLAM_TRACK_EXPORTS;SLAM_TOOL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\include;$(CudaToolkitIncludeDir);..\Thirdparty\opencv-3.4.1\modules\cudastereo\include;..\Thirdparty\opencv-3.4.1\modules\cudafeatures2d\include;..\Thirdparty\opencv-3.4.1\modules\cudaobjdetect\include;..\Thirdparty\opencv-3.4.1\modules\cudalegacy\include;..\Thirdparty\opencv-3.4.1\modules\cudacodec\include;..\Thirdparty\opencv-3.4.1\modules\cudaoptflow\include;..\Thirdparty\opencv-3.4.1\modules\cudev\include;..\Thirdparty\opencv-3.4.1\modules\cudawarping\include;..\Thirdparty\opencv-3.4.1\modules\cudabgsegm\include;..\Thirdparty\opencv-3.4.1\modules\cudaarithm\include;..\Thirdparty\opencv-3.4.1\modules\dnn\include;..\Thirdparty\opencv-3.4.1\modules\cudafilters\include;..\Thirdparty\opencv-3.4.1\modules\cudaimgproc\include\;..\Thirdparty\g2o\include\g2o;..\Thirdparty\g2o\include\;..\Thirdparty\eigen3\include\;..\Thirdparty\Pangolin\include;..\Thirdparty\opencv-3.4.1\build;..\Thirdparty\opencv-3.4.1\include;..\Thirdparty\opencv-3.4.1\include\opencv;..\Thirdparty\opencv-3.4.1\modules\core\include;..\Thirdparty\opencv-3.4.1\modules\flann\include;..\Thirdparty\opencv-3.4.1\modules\imgproc\include;..\Thirdparty\opencv-3.4.1\modules\ml\include;..\Thirdparty\opencv-3.4.1\modules\photo\include;..\Thirdparty\opencv-3.4.1\modules\video\include;..\Thirdparty\opencv-3.4.1\modules\imgcodecs\include;..\Thirdparty\opencv-3.4.1\modules\shape\include;..\Thirdparty\opencv-3.4.1\modules\videoio\include;..\Thirdparty\opencv-3.4.1\modules\highgui\include;..\Thirdparty\opencv-3.4.1\modules\objdetect\include;..\Thirdparty\opencv-3.4.1\modules\superres\include;..\Thirdparty\opencv-3.4.1\modules\ts\include;..\Thirdparty\opencv-3.4.1\modules\features2d\include;..\Thirdparty\opencv-3.4.1\modules\calib3d\include;..\Thirdparty\opencv-3.4.1\modules\stitching\include;..\Thirdparty\opencv-3.4.1\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/D "_AFXDLL"  /bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>nppisu.lib;nppif.lib;nppc.lib;cudart_static.lib;..\Thirdparty\opencv-3.4.1\build\lib\Debug\opencv_calib3d341d.lib;..\Thirdparty\opencv-3.4.1\build\lib\Debug\opencv_features2d341d.lib;..\Thirdparty\opencv-3.4.1\build\lib\Debug\opencv_imgcodecs341d.lib;..\Thirdparty\opencv-3.4.1\build\lib\Debug\opencv_imgproc341d.lib;..\Thirdparty\opencv-3.4.1\build\lib\Debug\opencv_core341d.lib;..\Thirdparty\opencv-3.4.1\build\lib\Debug\opencv_highgui341d.lib;..\Thirdparty\opencv-3.4.1\build\lib\Debug\opencv_cudafeatures2d341d.lib;..\Thirdparty\opencv-3.4.1\build\lib\Debug\opencv_cudafilters341d.lib;..\Thirdparty\opencv-3.4.1\build\lib\Debug\opencv_cudaimgproc341d.lib;..\Thirdparty\opencv-3.4.1\build\lib\Debug\opencv_cudev341d.lib;..\Thirdparty\Pangolin\lib\libpng16_staticd.lib;..\Thirdparty\Pangolin\lib\zlibstaticd.lib;..\Thirdparty\Pangolin\lib\jpeg.lib;..\Thirdparty\Pangolin\lib\glewd.lib;..\Thirdparty\Pangolin\lib\pangolind.lib;g2o_types_sim3_d.lib;g2o_types_sba_d.lib;g2o_types_slam3d_d.lib;g2o_core_d.lib;g2o_stuff_d.lib;g2o_opengl_helper_d.lib;opengl32.lib;glu32.lib;mf.lib;mfplat.lib;mfreadwrite.lib;mfuuid.lib;strmiids.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Thirdparty\g2o\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NOMINMAX;SLAM_IO_EXPORTS;SLAM_ELEM_EXPORTS;SLAM_TRACK_EXPORTS;SLAM_TOOL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\include;$(CudaToolkitIncludeDir);..\Thirdparty\opencv-3.4.1\modules\cudastereo\include;..\Thirdparty\opencv-3.4.1\modules\cudafeatures2d\include;..\Thirdparty\opencv-3.4.1\modules\cudaobjdetect\include;..\Thirdparty\opencv-3.4.1\modules\cudalegacy\include;..\Thirdparty\opencv-3.4.1\modules\cudacodec\include;..\Thirdparty\opencv-3.4.1\modules\cudaoptflow\include;..\Thirdparty\opencv-3.4.1\modules\cudev\include;..\Thirdparty\opencv-3.4.1\modules\cudawarping\include;..\Thirdparty\opencv-3.4.1\modules\cudabgsegm\include;..\Thirdparty\opencv-3.4.1\modules\cudaarithm\include;..\Thirdparty\opencv-3.4.1\modules\dnn\include;..\Thirdparty\opencv-3.4.1\modules\cudafilters\include;..\Thirdparty\opencv-3.4.1\modules\cudaimgproc\include\;..\Thirdparty\g2o\include\g2o;..\Thirdparty\g2o\include\;..\Thirdparty\eigen3\include\;..\Thirdparty\Pangolin\include;..\Thirdparty\opencv-3.4.1\build;..\Thirdparty\opencv-3.4.1\include;..\Thirdparty\opencv-3.4.1\include\opencv;..\Thirdparty\opencv-3.4.1\modules\core\include;..\Thirdparty\opencv-3.4.1\modules\flann\include;..\Thirdparty\opencv-3.4.1\modules\imgproc\include;..\Thirdparty\opencv-3.4.1\modules\ml\include;..\Thirdparty\opencv-3.4.1\modules\photo\include;..\Thirdparty\opencv-3.4.1\modules\video\include;..\Thirdparty\opencv-3.4.1\modules\imgcodecs\include;..\Thirdparty\opencv-3.4.1\modules\shape\include;..\Thirdparty\opencv-3.4.1\modules\videoio\include;..\Thirdparty\opencv-3.4.1\modules\highgui\include;..\Thirdparty\opencv-3.4.1\modules\objdetect\include;..\Thirdparty\opencv-3.4.1\modules\superres\include;..\Thirdparty\opencv-3.4.1\modules\ts\include;..\Thirdparty\opencv-3.4.1\modules\features2d\include;..\Thirdparty\opencv-3.4.1\modules\calib3d\include;..\Thirdparty\opencv-3.4.1\modules\stitching\include;..\Thirdparty\opencv-3.4.1\modules\videostab\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>nppisu.lib;nppif.lib;nppc.lib;cudart_static.lib;..\Thirdparty\opencv-3.4.1\build\lib\Release\opencv_calib3d341.lib;..\Thirdparty\opencv-3.4.1\build\lib\Release\opencv_features2d341.lib;..\Thirdparty\opencv-3.4.1\build\lib\Release\opencv_imgcodecs341.lib;..\Thirdparty\opencv-3.4.1\build\lib\Release\opencv_imgproc341.lib;..\Thirdparty\opencv-3.4.1\build\lib\Release\opencv_core341.lib;..\Thirdparty\opencv-3.4.1\build\lib\Release\opencv_highgui341.lib;..\Thirdparty\opencv-3.4.1\build\lib\Release\opencv_cudafeatures2d341.lib;..\Thirdparty\opencv-3.4.1\build\lib\Release\opencv_cudafilters341.lib;..\Thirdparty\opencv-3.4.1\build\lib\Release\opencv_cudaimgproc341.lib;..\Thirdparty\opencv-3.4.1\build\lib\Release\opencv_cudev341.lib;..\Thirdparty\Pangolin\lib\libpng16_static.lib;..\Thirdparty\Pangolin\lib\zlibstatic.lib;..\Thirdparty\Pangolin\lib\jpeg.lib;..\Thirdparty\Pangolin\lib\glew.lib;..\Thirdparty\Pangolin\lib\pangolin.lib;g2o_types_sim3.lib;g2o_types_sba.lib;g2o_types_slam3d.lib;g2o_core.lib;g2o_stuff.lib;g2o_opengl_helper.lib;opengl32.lib;glu32.lib;mf.lib;mfplat.lib;mfreadwrite.lib;mfuuid.lib;strmiids.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\Thirdparty\g2o\lib;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Converter.cpp" />
+    <ClCompile Include="src\Cuda\Cuda_Wrapper.cpp" />
+    <ClCompile Include="src\EdgeDetector\EdgeDrawing.cpp" />
+    <ClCompile Include="src\System.cpp" />
+    <ClCompile Include="src\Drawer.cpp" />
+    <ClCompile Include="src\Feature.cpp" />
+    <ClCompile Include="src\Frame.cpp" />
+    <ClCompile Include="src\GlobalMap.cpp" />
+    <ClCompile Include="src\HandHeld\GeoBase.cpp" />
+    <ClCompile Include="src\HandHeld\ParamReader_Hand.cpp" />
+    <ClCompile Include="src\KeyFrame.cpp" />
+    <ClCompile Include="src\LocalMapping.cpp" />
+    <ClCompile Include="src\LoopClosing.cpp" />
+    <ClCompile Include="src\Point.cpp" />
+    <ClCompile Include="src\Optimizer.cpp" />
+    <ClCompile Include="src\ReadWriter.cpp" />
+    <ClCompile Include="src\Stage\ParamReader_Stage.cpp" />
+    <ClCompile Include="src\Stage\PointCloud.cpp" />
+    <ClCompile Include="src\SubPixel\Matrix.cpp" />
+    <ClCompile Include="src\SubPixel\SubPixel.cpp" />
+    <ClCompile Include="src\Tracker.cpp" />
+    <ClCompile Include="src\Viewer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\Config.h" />
+    <ClInclude Include="include\Converter.h" />
+    <ClInclude Include="include\Cuda\Cuda_Wrapper.h" />
+    <ClInclude Include="include\Cuda\Exceptions.h" />
+    <ClInclude Include="include\Cuda\helper_cuda.h" />
+    <ClInclude Include="include\Cuda\helper_string.h" />
+    <ClInclude Include="include\EdgeDetector\EdgeDrawing.hpp" />
+    <ClInclude Include="include\impl\Matcher.hpp" />
+    <ClInclude Include="include\impl\Point.hpp" />
+    <ClInclude Include="include\System.h" />
+    <ClInclude Include="include\Drawer.h" />
+    <ClInclude Include="include\Feature.h" />
+    <ClInclude Include="include\Frame.h" />
+    <ClInclude Include="include\GlobalMap.h" />
+    <ClInclude Include="include\HandHeld\GeoBase.h" />
+    <ClInclude Include="include\HandHeld\ParamReader_Hand.h" />
+    <ClInclude Include="include\KeyFrame.h" />
+    <ClInclude Include="include\LocalMapping.h" />
+    <ClInclude Include="include\LoopClosing.h" />
+    <ClInclude Include="include\Matcher.h" />
+    <ClInclude Include="include\Point.h" />
+    <ClInclude Include="include\Optimizer.h" />
+    <ClInclude Include="include\ReadWriter.h" />
+    <ClInclude Include="include\Stage\ParamReader_Stage.hpp" />
+    <ClInclude Include="include\Stage\PointCloud.h" />
+    <ClInclude Include="include\SubPixel\Matrix.h" />
+    <ClInclude Include="include\SubPixel\OwnArray.h" />
+    <ClInclude Include="include\SubPixel\SubPixel.h" />
+    <ClInclude Include="include\ThreadPool.h" />
+    <ClInclude Include="include\Tracker.h" />
+    <ClInclude Include="include\TypeDef.h" />
+    <ClInclude Include="include\Viewer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.0.targets" />
+  </ImportGroup>
+</Project>

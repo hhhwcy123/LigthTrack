@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments>-mode 0 -type 0 --noise -0.03 0.03 -calib D:\Data\HandHeld-TEST\rulerimg1218-1\External.rt -map D:\Data\HandHeld-TEST\rulerimg1218-1\map.txt -o D:\Data\HandHeld-TEST\rulerimg1218-1\</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

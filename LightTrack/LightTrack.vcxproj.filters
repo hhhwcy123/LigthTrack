@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\Stage">
+      <UniqueIdentifier>{b149625d-0e00-44a5-8e20-2614dc5ea848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Stage">
+      <UniqueIdentifier>{ad56e378-633a-4e32-bad4-d378f57db4c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\HandHeld">
+      <UniqueIdentifier>{cd65a2fb-370c-42b5-b59a-4a2739d58767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\HandHeld">
+      <UniqueIdentifier>{61e4f3e0-f6b6-4c8a-887a-356f2615870b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Cuda">
+      <UniqueIdentifier>{78a28427-1559-463d-bd23-ae6349770c2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Cuda">
+      <UniqueIdentifier>{a6e667f0-c481-414f-827c-332089762a83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\SubPixel">
+      <UniqueIdentifier>{b9dc0b56-7ea5-483a-868e-5d592f581915}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SubPixel">
+      <UniqueIdentifier>{a6f226a4-bcdb-4e10-a33d-a62fa9ab2729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\impl">
+      <UniqueIdentifier>{1df8c6d8-c321-42f9-bc12-4a966c8d68e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\EdgeDetector">
+      <UniqueIdentifier>{743f2107-75af-45e8-8b78-f6835350d4a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\EdgeDetector">
+      <UniqueIdentifier>{8822f61a-2d40-4ac4-bd03-02026f5c7934}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Frame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tracker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Optimizer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Converter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Point.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Drawer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Viewer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GlobalMap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KeyFrame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ReadWriter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Feature.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Stage\PointCloud.cpp">
+      <Filter>源文件\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Stage\ParamReader_Stage.cpp">
+      <Filter>源文件\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HandHeld\GeoBase.cpp">
+      <Filter>源文件\HandHeld</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HandHeld\ParamReader_Hand.cpp">
+      <Filter>源文件\HandHeld</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LocalMapping.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LoopClosing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cuda\Cuda_Wrapper.cpp">
+      <Filter>源文件\Cuda</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubPixel\SubPixel.cpp">
+      <Filter>源文件\SubPixel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubPixel\Matrix.cpp">
+      <Filter>源文件\SubPixel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EdgeDetector\EdgeDrawing.cpp">
+      <Filter>源文件\EdgeDetector</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Frame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Tracker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GlobalMap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Optimizer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Converter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Point.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Drawer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Viewer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\KeyFrame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Matcher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ReadWriter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\System.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Feature.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Stage\PointCloud.h">
+      <Filter>头文件\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Stage\ParamReader_Stage.hpp">
+      <Filter>头文件\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="include\HandHeld\GeoBase.h">
+      <Filter>头文件\HandHeld</Filter>
+    </ClInclude>
+    <ClInclude Include="include\HandHeld\ParamReader_Hand.h">
+      <Filter>头文件\HandHeld</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LocalMapping.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LoopClosing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ThreadPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TypeDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Cuda\Cuda_Wrapper.h">
+      <Filter>头文件\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Cuda\Exceptions.h">
+      <Filter>头文件\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Cuda\helper_cuda.h">
+      <Filter>头文件\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Cuda\helper_string.h">
+      <Filter>头文件\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SubPixel\Matrix.h">
+      <Filter>头文件\SubPixel</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SubPixel\OwnArray.h">
+      <Filter>头文件\SubPixel</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SubPixel\SubPixel.h">
+      <Filter>头文件\SubPixel</Filter>
+    </ClInclude>
+    <ClInclude Include="include\impl\Matcher.hpp">
+      <Filter>头文件\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\impl\Point.hpp">
+      <Filter>头文件\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EdgeDetector\EdgeDrawing.hpp">
+      <Filter>头文件\EdgeDetector</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
